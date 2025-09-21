@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - Bill Splitter</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Make the dashboard split into two halves: left for form, right for background image */
+    body.dashboard-page {
+      display: flex;
+      margin: 0;
+      height: 100vh;
+    }
+
+    /* Remove the background from body, as the image is now on the right side */
+    body.dashboard-page {
+      background: none;
+    }
+
+    /* Left side: existing content (main) */
+    main {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+    }
+
+    /* Right side: background image only, full height */
+    body.dashboard-page::after {
+      content: "";
+      flex: 1;
+      background-image: url("images/bg-dashboard.jpeg");
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+<body class="dashboard-page">
+  <header class="navbar">
+    <h1><i class="fa-solid fa-chart-pie"></i> Bill Splitter Dashboard 🎉</h1>
+    <button id="logoutBtn" class="btn logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</button>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2><i class="fa-solid fa-calendar-plus"></i> Create Event</h2>
+      <form id="eventForm">
+        <input type="text" id="eventName" placeholder="📌 Event Name" required />
+        <input type="number" id="totalAmount" placeholder="💰 Total Amount" required />
+        <input type="text" id="payer" placeholder="🙋 Payer Name" required />
+        <textarea id="members" placeholder="👥 Enter members (Name:Email, one per line)" required></textarea>
+        <button type="submit" class="btn"><i class="fa-solid fa-plus"></i> Create Event</button>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2><i class="fa-solid fa-list"></i> Events</h2>
+      <div id="eventsList" class="events-list"></div>
+    </section>
+  </main>
+  <script src="js/event.js"></script>
+</body>
+</html>

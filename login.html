@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login - Bill Splitter</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    /* Style for login page with side image */
+    body.auth-page {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f0f4f8;
+    }
+
+    .login-container {
+      display: flex;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      max-width: 800px;
+      width: 90%;
+      overflow: hidden;
+    }
+
+    .form-section {
+      flex: 1;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .image-section {
+      flex: 1;
+      background: url("images/bg-auth.jpeg") no-repeat center center/cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-section img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    /* Keep existing styles for form and inputs */
+    input, button {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 14px;
+    }
+
+    .btn {
+      padding: 12px;
+      background: linear-gradient(45deg, #007bff, #00c6ff);
+      color: white;
+      border-radius: 30px;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: linear-gradient(45deg, #0056b3, #00a3cc);
+      transform: scale(1.05);
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: #007bff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body class="auth-page">
+  <div class="login-container">
+    <div class="form-section">
+      <h2><i class="fa-solid fa-right-to-bracket"></i> Login</h2>
+      <form id="loginForm" autocomplete="off">
+        <input type="email" id="email" placeholder="📧 Email" required />
+        <input type="password" id="password" placeholder="🔑 Password" required />
+        <button type="submit" class="btn"><i class="fa-solid fa-sign-in-alt"></i> Login</button>
+      </form>
+      <p>Don’t have an account? <a href="register.html">Register</a></p>
+    </div>
+    <div class="image-section">
+      <img src="images/bg-auth.jpg" alt="Auth Image" />
+    </div>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>

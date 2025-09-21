@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Register - Bill Splitter</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body class="auth-page">
+  <div class="overlay"></div>
+  <div class="form-container">
+    <h2><i class="fa-solid fa-user-plus"></i> Create Account</h2>
+    <form id="registerForm" autocomplete="off">
+      <input type="text" id="name" placeholder="👤 Name" required />
+      <input type="email" id="email" placeholder="📧 Email" required />
+      <input type="password" id="password" placeholder="🔑 Password" required />
+      <button type="submit" class="btn"><i class="fa-solid fa-check"></i> Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </div>
+  <script src="js/auth.js"></script>
+</body>
+</html>
